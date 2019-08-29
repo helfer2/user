@@ -6,7 +6,7 @@ resource "random_id" "server" {
 }
 
 resource "azurerm_traffic_manager_profile" "interprovider" {
-  name                   = "interprovider-trafficmanager"
+  name                   = "user25trafficmanager"
   resource_group_name    = "${azurerm_resource_group.rg.name}"
   traffic_routing_method = "Weighted"
 
