@@ -26,7 +26,7 @@ resource "azurerm_traffic_manager_endpoint" "azureLB" {
   name                = "first"
   resource_group_name = "${azurerm_resource_group.rg.name}"
   profile_name        = "${azurerm_traffic_manager_profile.interprovider.name}"
-  target              = "user15skcncazure4.japaneast.cloudapp.azure.com"
+  target              = "user25finalskcncazureip.japaneast.cloudapp.azure.com"
   type                = "externalEndpoints"
   weight              = 1
 }
@@ -35,7 +35,7 @@ resource "azurerm_traffic_manager_endpoint" "awsLB" {
   name                = "second"
   resource_group_name = "${azurerm_resource_group.rg.name}"
   profile_name        = "${azurerm_traffic_manager_profile.interprovider.name}"
-  target              = "alb2user15-1160189990.ap-northeast-1.elb.amazonaws.com"
+  target              = "albuser25-1160189990.ap-northeast-1.elb.amazonaws.com"
   type                = "externalEndpoints"
   weight              = 2
 }
