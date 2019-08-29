@@ -27,7 +27,7 @@ resource "azurerm_traffic_manager_endpoint" "azureLB" {
   resource_group_name = "${azurerm_resource_group.rg.name}"
   profile_name        = "${azurerm_traffic_manager_profile.interprovider.name}"
   target              = "user25finalskcncazureip.japaneast.cloudapp.azure.com"
-  type                = "externalEndpoints"
+  type                = "azureEndpoints"
   weight              = 1
 }
 
