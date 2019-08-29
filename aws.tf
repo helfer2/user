@@ -71,6 +71,9 @@ resource "aws_route_table" "awsrtp" {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.awsipg.id}"
   }
+  tags = {
+    Name = "user25route"
+  }
 }
 
 resource "aws_route_table_association" "awsrtp1a" {
@@ -199,7 +202,7 @@ resource "aws_instance" "web2" {
 }
 	
 resource "aws_alb" "frontend" {
-  name            = "alb2user25"
+  name            = "albuser25"
   internal        = false
   security_groups = ["${aws_security_group.webserverSecurutyGroup.id}"]
   subnets         = [
