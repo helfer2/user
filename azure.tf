@@ -48,7 +48,7 @@ resource "azurerm_subnet" "mysubnet" {
     name = "MySubnetuser25final"
     resource_group_name = "${azurerm_resource_group.rg.name}"
     virtual_network_name = "${azurerm_virtual_network.vnetwork.name}"
-    azurerm_subnet_network_security_group_association = "${azurerm_network_security_group.secGroup.id}"
+    network_security_group_id = "${azurerm_network_security_group.secGroup.id}"
     address_prefix = "45.0.1.0/24"
 }
 resource "azurerm_public_ip" "publicdomainip" {
